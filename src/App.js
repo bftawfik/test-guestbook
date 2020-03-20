@@ -8,7 +8,7 @@ class App extends Component {
 
     this.state = {
       user: {
-        loggedIn: true,
+        loggedIn: false,
         toggleUser: user => {
           this.setState({
             user: { ...user, loggedIn: !user.loggedIn }

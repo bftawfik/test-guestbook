@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
 import { withUser } from "./Context/UserProvider";
 
@@ -12,18 +12,20 @@ import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 
 const Router = ({ user }) => {
+    const { loggedIn } = user;
+
   return (
     <BrowserRouter>
       <Header />
       <Switch>
         <Route path={PATHES.HOME} exact>
-          <Home />
+          {loggedIn ? <Home /> : <Redirect to={PATHES.LOGIN} />}
         </Route>
         <Route path={PATHES.LOGIN}>
-          <Login />
+          {loggedIn ? <Redirect to={PATHES.HOME} /> : <Login />}
         </Route>
         <Route path={PATHES.REGISTER}>
-          <Register />
+          {loggedIn ? <Redirect to={PATHES.HOME} /> : <Register />}
         </Route>
       </Switch>
       <Footer />
