@@ -1,24 +1,29 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
+import { withUser } from "./Context/UserProvider";
+
 import { PATHES } from "./Constants/routes";
 
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
+import Home from './Pages/Home/Home';
+import Login from "./Pages/Login/Login";
+import Register from "./Pages/Register/Register";
 
-const Router = props => {
+const Router = ({ user }) => {
   return (
     <BrowserRouter>
       <Header />
       <Switch>
         <Route path={PATHES.HOME} exact>
-          <div>Home Page</div>
+          <Home />
         </Route>
         <Route path={PATHES.LOGIN}>
-          <div>Login Page</div>
+          <Login />
         </Route>
         <Route path={PATHES.REGISTER}>
-          <div>Register Page</div>
+          <Register />
         </Route>
       </Switch>
       <Footer />
@@ -26,4 +31,4 @@ const Router = props => {
   );
 };
 
-export default Router;
+export default withUser(Router);
