@@ -5,13 +5,13 @@ import { withUser } from "../../../Context/UserProvider";
 import { PATHES } from "../../../Constants/routes";
 
 const Navigation = ({ user }) => {
-  const { loggedIn, toggleUser } = user;
+  const { id, logout } = user;
   return (
     <nav>
       <ul>
-        {loggedIn ? (
+        {id ? (
           <li>
-            <button onClick={() => toggleUser(user)}>Logout</button>
+            <button onClick={logout}>Logout</button>
           </li>
         ) : (
           <React.Fragment>

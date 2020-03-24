@@ -12,20 +12,20 @@ import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 
 const Router = ({ user }) => {
-    const { loggedIn } = user;
+    const { id } = user;
 
   return (
     <BrowserRouter>
       <Header />
       <Switch>
         <Route path={PATHES.HOME} exact>
-          {loggedIn ? <Home /> : <Redirect to={PATHES.LOGIN} />}
+          {id ? <Home /> : <Redirect to={PATHES.LOGIN} />}
         </Route>
         <Route path={PATHES.LOGIN}>
-          {loggedIn ? <Redirect to={PATHES.HOME} /> : <Login />}
+          {id ? <Redirect to={PATHES.HOME} /> : <Login />}
         </Route>
         <Route path={PATHES.REGISTER}>
-          {loggedIn ? <Redirect to={PATHES.HOME} /> : <Register />}
+          {id ? <Redirect to={PATHES.HOME} /> : <Register />}
         </Route>
       </Switch>
       <Footer />
