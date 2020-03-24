@@ -5,6 +5,8 @@ import { withUser } from "../../Context/UserProvider";
 import { PATHES } from "../../Constants/routes";
 import { login, authenticate, getAuthCookie } from "../../Service/Service";
 
+import * as styles from "./Login.module.scss";
+;
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -60,7 +62,7 @@ class Login extends Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.Login}>
         <header>
           <h1>Login</h1>
           <p>Please fill in this form to login.</p>

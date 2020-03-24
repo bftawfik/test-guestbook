@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Router from "./Router";
+import Router from "./Router"; 
 
 import {
   authenticate,
@@ -9,6 +9,8 @@ import {
   removeAuthCookie
 } from "./Service/Service";
 import UserProvider from "./Context/UserProvider";
+
+import './App.scss';
 
 class App extends Component {
   constructor(props) {

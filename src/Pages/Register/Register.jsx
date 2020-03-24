@@ -5,6 +5,8 @@ import { withUser } from "../../Context/UserProvider";
 import { PATHES } from "../../Constants/routes";
 import { addUser } from "../../Service/Service";
 
+import * as styles from "./Register.module.scss";
+
 class Register extends Component {
   constructor(props) {
     super(props);
@@ -55,7 +57,7 @@ class Register extends Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.Register}>
         <header>
           <h1>Register</h1>
           <p>Please fill in this form to create an account.</p>

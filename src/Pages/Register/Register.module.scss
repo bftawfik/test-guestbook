@@ -1,0 +1,53 @@
+.Register{
+  width: 70%;
+  margin: 0 auto;
+  border: 3px solid var(--primary-color);
+  border-radius: 2rem;
+  background-color: rgba(0 ,0, 0, 0.1);
+  padding: 2rem;
+  font-size: 2rem;
+
+  header h1 {
+    text-align: center; 
+    font-size: 4rem;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  input {
+    border: 1px solid var(--primary-color);
+    padding: 1rem;
+    width: calc(100% - 2rem);
+    margin-bottom: 3rem;
+    border-radius: 10px;
+  }
+
+  button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: 0;
+    padding: 1rem 7rem;
+    border-radius: 10px;font-size: 1.8rem;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    &:hover {
+      color: var(--secondary-color);
+    }
+  }
+}
