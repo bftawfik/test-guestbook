@@ -28,12 +28,22 @@
     li {
       padding: 0 2rem;
       border-left: 1px solid white;
-      a {
+      a, button {
         color: inherit;
         text-decoration: inherit;
         &:hover {
           text-decoration: underline;
         }
+      }
+
+      button {
+        border: 0;
+        background-color: transparent;
+        padding: 0;
+        font-size: inherit;
+      }
+      &:last-child {
+        padding-right: 0;
       }
     }
   }
