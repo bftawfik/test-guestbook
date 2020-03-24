@@ -66,7 +66,7 @@ class Login extends Component {
           <p>Please fill in this form to login.</p>
         </header>
         <form onSubmit={this.onSubmitHandler}>
-          <label for="email">
+          <label htmlFor="email">
             <b>E-mail</b>
           </label>
           <input
@@ -77,7 +77,7 @@ class Login extends Component {
             onChange={event => this.emailChangeHandler(event.target.value)}
           />
 
-          <label for="psw">
+          <label htmlFor="psw">
             <b>Password</b>
           </label>
           <input

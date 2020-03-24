@@ -61,7 +61,7 @@ class Register extends Component {
           <p>Please fill in this form to create an account.</p>
         </header>
         <form onSubmit={this.onSubmitHandler}>
-          <label for="username">
+          <label htmlFor="username">
             <b>User name</b>
           </label>
           <input
@@ -72,7 +72,7 @@ class Register extends Component {
             onChange={event => this.usernameChangeHandler(event.target.value)}
           />
 
-          <label for="email">
+          <label htmlFor="email">
             <b>E-mail</b>
           </label>
           <input
@@ -83,7 +83,7 @@ class Register extends Component {
             onChange={event => this.emailChangeHandler(event.target.value)}
           />
 
-          <label for="psw">
+          <label htmlFor="psw">
             <b>Password</b>
           </label>
           <input
@@ -95,7 +95,7 @@ class Register extends Component {
             onChange={this.passwordChangeHandler}
           />
 
-          <label for="psw-repeat">
+          <label htmlFor="psw-repeat">
             <b>Repeat Password</b>
           </label>
           <input
