@@ -1,0 +1,46 @@
+.Reply {
+  border-radius: 10px;
+  padding: 20px;
+  // background-color: rgba(192, 192, 192, 0.5 );
+  margin-bottom: 30px;
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+  }
+  textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+    height: 100px;
+    margin-bottom: 0.5rem;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  .controlls {
+    display: flex;
+    justify-content: flex-start;
+    button {
+      background-color: var(--primary-color);
+      color: white;
+      border: 0;
+      padding: 0.5rem 3rem;
+      border-radius: 10px;
+      font-size: inherit;
+      display: block;
+      cursor: pointer;
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+    .cancel{
+      margin-left: 10px;
+      &:hover {
+        background-color: red;
+        color: white;
+      }
+      }
+  }
+}

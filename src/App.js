@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import Router from "./Router"; 
-
+import Loading from './Components/Loading/Loading';
 import {
   authenticate,
   addAuthCookie,
@@ -17,6 +17,7 @@ class App extends Component {
     super(props);
 
     this.state = {
+      loading: true,
       user: {
         id: undefined,
         username: undefined,
@@ -52,22 +53,32 @@ class App extends Component {
     const token = getAuthCookie("coformatiqueGuestbook") || null;
     if (token) {            
       authenticate(token)
-      .then(res => {     
+      .then(res => {
+        this.toggleLoading();
         user.login(res.data, token);
       })
       .catch( err => {
+        this.toggleLoading();
         this.state.user.logout();
       });
+    }else{
+      this.toggleLoading();
     }
   }
 
+  toggleLoading = () => {
+    this.setState({ loading: !this.state.loading });
+  }
+
   render() {
-    const { user } = this.state;    
+    const { loading, user } = this.state;    
     return (
       <div className="App">
-        <UserProvider value={user}>
-          <Router />
-        </UserProvider>
+        {loading ? <Loading /> : (
+          <UserProvider value={user}>
+            <Router />
+          </UserProvider>
+        )}
       </div>
     );
   }

@@ -1,0 +1,49 @@
+.Message {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  .container {
+    margin-bottom: 10px;
+    .info {
+      display: flex;
+      justify-content: space-between;
+      .date span {
+        padding-left: 5px;
+      }
+    }
+    .body {      
+      padding: 20px;
+      border: 2px solid #cccccc;
+      border-radius: 10px;
+      background-color: rgba(192, 192, 192, 0.1 );
+      margin: 5px 0;
+    }
+    .controlls {
+      display: flex;
+      justify-content: flex-start;
+      button {
+        background-color: var(--primary-color);
+        color: white;
+        border: 0;
+        padding: 0.5rem 3rem;
+        border-radius: 10px;
+        font-size: inherit;
+        display: block;
+        cursor: pointer;
+        &:hover {
+          color: var(--secondary-color);
+        }
+      }
+      .delete{
+        margin-left: 10px;
+        &:hover {
+          background-color: red;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .children {
+    margin-left: 30px;
+  }
+}

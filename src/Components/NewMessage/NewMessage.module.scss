@@ -1,0 +1,37 @@
+.NewMessage {
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgba(192, 192, 192, 0.5 );
+  margin-bottom: 30px;
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+  }
+  textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+    height: 100px;
+    margin-bottom: 0.5rem;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+
+  button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: 0;
+    padding: 1rem 7rem;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+}
