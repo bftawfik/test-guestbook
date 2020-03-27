@@ -94,4 +94,10 @@ router.get('/auth', auth, (req, res) => {
     });
 })
 
+router.route('/').get((req, res) => {
+  User.find()
+    .then(users => res.json(users.map(user => ({id: user._id, username: user.username}))))
+    .catch(err => res.status(400).json('Error: ' + err));
+});
+
 module.exports = router;
